@@ -78,7 +78,8 @@ main {
 }
 
 main p {
-    max-width: 50%;
+    max-width: 1000px;
+    /*max-width: 50%;*/
     margin: auto;
 }
 
@@ -118,7 +119,8 @@ ul li {
 
 #scholarships table {
     margin:auto;
-    max-width: 60%;
+    max-width: 1000px;
+    /*max-width: 60%;*/
 }
 
 #scholarships td {
