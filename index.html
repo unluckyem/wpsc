@@ -13,8 +13,8 @@
         <a class="navigation" href="index.html">Home</a>
         <a class="navigation" href="about.html">About Us</a>
         <a class="navigation" target="_blank" href="http://WhitneyPierSC.rampregistrations.com">Register</a>
-        <a class="navigation" href="teams.html" >Teams </a>
-        <a class="navigation" href="schedules.html">Schedules</a>
+        <!--a class="navigation" href="teams.html" >Teams </a>
+        <a class="navigation" href="schedules.html">Schedules</a-->
         <a class="navigation" href="policies.html">Policies</a>
     </nav>
 
@@ -23,16 +23,30 @@
             <img src="src/cover2.jpg" width="100%"/>
         </div>
 
-        <div id="intro" class="text-center">
-            <h2>WHITNEY PIER SOCCER CLUB</h2>
-            <p>Youth soccer club based in Whitney Pier, NS.
-                We offer summer soccer programs for children aged U4 - U17. Our programs follow the Canada
-                Soccer pathways and encourage sportsmanship, physical literacy, and teamwork.
-                Whitney Pier Soccer is recognized as a Quality Soccer Provider in Canada Soccer's National 
-                Youth Club Licensing Program.</p>
+        <div id="intro" class="text-center container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>WHITNEY PIER SOCCER CLUB</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 col-sm-12">
+                    <p>
+                        Youth soccer club based in Whitney Pier, NS.
+                        We offer summer soccer programs for children aged U4 - U17. Our programs follow the Canada
+                        Soccer pathways and encourage sportsmanship, physical literacy, and teamwork.
+                        Whitney Pier Soccer is recognized as a Quality Soccer Provider in Canada Soccer's National 
+                        Youth Club Licensing Program.
+                    </p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            
+            
         </div>
 
-        <div id="reg-info" class="text-center">
+        <div id="reg-info" class="text-center fade-in">
             <h2>2025 SUMMER SEASON REGISTRATION</h2>
             <h6>OPENS APRIL 5</h6>
             <table>
@@ -94,6 +108,21 @@
         <img src="src/logo.png" width="40" height="40" alt="" class="p-1">
         <p>Whitney Pier Soccer Club</p>
     </footer>
+
+    <script>
+        const appear = document.querySelector('.fade-in'); 
+        const cb = function(entries){
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('inview');
+                }else{
+                    entry.target.classList.remove('inview');
+                }
+            });
+        }
+        const io = new IntersectionObserver(cb);
+        io.observe(appear);
+    </script>
     
 </body>
 </html>
