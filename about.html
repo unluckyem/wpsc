@@ -13,8 +13,8 @@
         <a class="navigation" href="index.html">Home</a>
         <a class="navigation" href="about.html">About Us</a>
         <a class="navigation" target="_blank" href="http://WhitneyPierSC.rampregistrations.com">Register</a>
-        <a class="navigation" href="teams.html" >Teams </a>
-        <a class="navigation" href="schedules.html">Schedules</a>
+        <!--a class="navigation" href="teams.html" >Teams </a>
+        <a class="navigation" href="schedules.html">Schedules</a-->
         <a class="navigation" href="policies.html">Policies</a>
     </nav>
 
@@ -31,33 +31,35 @@
 
         </div>
 
-        <div id="scholarships">
-            <h2>SCHOLARSHIPS</h2>
+        <div id="scholarships" class="container-fluid fade-in">
+            <div class="row">
+                <div class="col-12">
+                    <h2>SCHOLARSHIPS</h2>
+                </div>
+            </div>
+            
             <br/>
-            <table>
-                <tr>
-                    <th>
-                        Kim Neville Memorial Scholarship
-                    </th>
-                    <th>
-                        Steve Campbell Memorial Scholarship
-                    </th>
-                </tr>
-                <tr>
-                    <td>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h6><strong>Kim Neville Memorial Scholarship</strong></h6>
+                    <p>
                         Kim was an integral part of the Whitney Pier Soccer executive
                         as well as a longtime soccer player and coach. This scholarship
                         is presented to one graduating female who has been involved with 
                         WPSC.
-                    </td>
-                    <td>
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <h6><strong>Steve Campbell Memorial Scholarship</strong></h6>
+                    <p>
                         Steve loved to coach. This was his passion and he dedicated many 
                         hours to volunteering, both for Sydney Academy and Whitney Pier
                         Soccer Club. This scholarship is presented to one graduating male
                         who has been involved with WPSC.
-                    </td>
-                </tr>
-            </table>
+                    </p>
+                </div>
+            </div>
 
         </div>
 
@@ -65,7 +67,7 @@
             <h2>CONTACT US</h2>
             <ul>
                 <li><i class="fa fa-map-marker"></i> Neville Park</li>
-                <li><i class="fa fa-envelope"></i> whitneypiersoccer@gmail.com</li>
+                <li><i class="fa fa-envelope"></i> <a href="mailto:whitneypiersoccer@gmail.com">whitneypiersoccer@gmail.com</a></li>
             </ul>
         </div>
     </main>
@@ -74,6 +76,21 @@
         <img src="src/logo.png" width="40" height="40" alt="" class="p-1">
         <p>Whitney Pier Soccer Club</p>
     </footer>
+
+    <script>
+        const appear = document.querySelector('.fade-in'); 
+        const cb = function(entries){
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('inview');
+                }else{
+                    entry.target.classList.remove('inview');
+                }
+            });
+        }
+        const io = new IntersectionObserver(cb);
+        io.observe(appear);
+    </script>
     
 </body>
 </html>
