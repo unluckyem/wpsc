@@ -1,0 +1,164 @@
+/**
+#2f3954 bg
+#ffe873
+#4f80cd
+#83e6ec
+#65b1f2
+#fff582
+#fbfff1 text
+*/
+
+body::before {
+    background-color: #1d1c2c;
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    padding-bottom: 0px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: fixed;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -101;
+} /*fixed overscroll*/
+
+body::after {
+    background-color: #1d1c2c;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2f3954;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #fbfff1;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #1d1c2c; /**#4f80cd;*/
+    overflow: hidden;
+    /*padding-left: 20px;*/
+    padding: 10px;
+    z-index: 5;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff582;
+    padding: 50px 10px;
+}
+
+nav .navigation:hover {
+    background-color: #2f3954;;
+}
+
+main {
+    z-index: 1;
+    text-align: center;
+    padding-top: 40px;
+    background-color: #2f3954;
+    color: #9fcff9;
+    min-height: 85vh;
+}
+
+
+#intro {
+    color: #fbfff1;
+    padding: 100px;
+    justify-content: center;
+}
+
+main p {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#reg-info, #scholarships {
+    padding: 100px;
+    justify-content: center;
+    background-color: #9fcff9;
+    color: #1d1c2c
+}
+
+#reg-info table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reg-info th {
+    padding: 2px 10px;
+}
+
+#policies, #teams, #schedules, #fields, #contact{
+    padding: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 10px;
+}
+
+#policies ul li a {
+    text-decoration: none;
+    color: #fbfff1;
+    padding: 10px;
+}
+
+#scholarships table {
+    margin:auto;
+    max-width: 1000px;
+}
+
+#scholarships td {
+    padding: 2px 20px;
+}
+
+#scholarships h6 {
+    padding-top: 10px;
+}
+
+#scholarships .col-sm-12 {
+    padding: 15px;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #9fcff9;
+}
+
+.fade-in{
+    opacity: 0;
+    /*transform: translateY(20vh);*/
+    visibility: hidden;
+    transition: opacity 0.6s ease-out/*, transform 1.2s ease-out*/;
+    will-change: opacity, visibility;
+}
+
+.fade-in.inview {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+
+footer {
+    padding-top: 15px;
+    padding-bottom: 10px; 
+    background-color: #1d1c2c;
+    color: #fff582;
+}
+
